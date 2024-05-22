@@ -3,9 +3,11 @@ from datetime import datetime
 import uuid
 
 # Initialize the client
-client = DataAPIClient("AstraCS:IZOGLgZALusboxhhaegqJymg:333d7002876e83c4a46d2e058ca0087ece1d0f55cc6bc8e848f7c925b228e513")
+#Set your Astra DB application token
+client = DataAPIClient("")
+#Pass your database API endpoint by copying from the Astra DB UI
 db = client.get_database_by_api_endpoint(
-  "https://f44739af-e770-4360-8001-7be7c2f0ac86-us-east-2.apps.astra.datastax.com"
+  ""
 )
 
 print(f"Connected to Astra DB: {db.list_collection_names()}")
